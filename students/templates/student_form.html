@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <h2 class="text-white bg-dark bg-gradient text-center p-3">Form</h2><br>
+            <form class="container center" method="POST"> <!--mapunta sa view.py-->
+                {% csrf_token %}
+                <!--first name-->
+                <div class="flex flex-col">
+                    <label for="{{ form.first_name.id_for_label }}">{{ form.first_name.label }}</label>
+                    <br /> 
+                    {{ form.first_name }}
+                </div>
+        
+                <!--last name-->
+                <div class="flex flex-col">
+                    <label for="{{ form.last_name.id_for_label }}">{{ form.last_name.label }}</label>
+                    <br /> 
+                    {{ form.last_name }}
+                </div>
+        
+                <!--course name-->
+                <div class="flex flex-col">
+                    <label for="{{ form.course.id_for_label }}">{{ form.course.label }}</label>
+                    <br /> 
+                    {{ form.course }}
+                </div>
+        
+                <!--gender name-->
+                <div class="flex flex-col">
+                    <label for="{{ form.gender.id_for_label }}">{{ form.gender.label }}</label>
+                    <br /> 
+                    {{ form.gender }}
+                </div>
+        
+                <!--age name-->
+                <div class="flex flex-col">
+                    <label for="{{ form.age.id_for_label }}">{{ form.age.label }}</label>
+                    <br /> 
+                    {{ form.age }}
+                </div>
+        
+                <input type="submit" value="Submit" class="mt-2" href="student_table.html"/>
+            </form>
+
+        </div>
+    </div>
+
+
+
+</body>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</html>
